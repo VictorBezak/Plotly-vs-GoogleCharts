@@ -11,7 +11,7 @@ html {
 button {
     font-weight: bold;
     min-width: 6em;
-    height: min-content; width: min-content;
+    /* height: min-content; width: min-content; */
     padding: 4px 8px;
     border-radius: 8px;
     border-style: outset;
@@ -26,7 +26,7 @@ button:active {
 
 body {
     height: 100vh; width: 100vw;
-    background-color: #dddddd;
+    background-color: #aaaaaa;
     display: grid;
     grid-template-rows: auto 1fr;
 }

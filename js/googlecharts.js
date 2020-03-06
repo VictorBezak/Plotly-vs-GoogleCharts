@@ -10,7 +10,7 @@ let gchart_graph = (d) => {
 
         let data = google.visualization.arrayToDataTable([
             // Data-column headers
-            ['Month', '2020', '2019 STLY', '2019 Total'],
+            ['Month', 'A', 'B', 'C'],
 
             ['Jan', .7516, .7601, .7601],
             ['Feb', .7694, .6439, .7714],
@@ -44,9 +44,9 @@ let gchart_graph = (d) => {
                 groupWidth: '56%'
             },
             legend: {
-                position: 'none'
-                // position: 'top',
-                // alignment: 'end'
+                // position: 'none'
+                position: 'top',
+                alignment: 'end'
             },
             // enableInteractivity: false,
             // explorer: {},  // right click to reset

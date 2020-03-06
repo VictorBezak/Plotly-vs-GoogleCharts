@@ -11,7 +11,7 @@ const plotly_graph = () => {
     const x_axis = ['Jan', 'Feb', 'Mar', 'Apr', 'May'];
 
     let trace1 = {
-        name: '2020',
+        name: 'A',
         type: 'bar',
         x: x_axis,
         // y: [75.16, 76.94, 66.18, 54.68, 68.16, 66.39, 51.66, 56.66, 61.21, 63.01, 69.08, 27.18],
@@ -19,13 +19,10 @@ const plotly_graph = () => {
         marker: {
             color: 'rgb(8, 142, 199)'
         }
-        // hoverlabel: {
-        //     bgcolor: 'black'
-        // }
     };
 
     let trace2 = {
-        name: '2019 STLY',
+        name: 'B',
         type: 'bar',
         x: x_axis,
         // y: [76.01, 64.39, 4.01, 7.64, 11.05, 8.85, 6.78, 2.7, 2.99, 3.03, 1.03, 0.4],
@@ -36,7 +33,7 @@ const plotly_graph = () => {
     };
 
     let trace3 = {
-        name: '2019 Total',
+        name: 'C',
         type: 'bar',
         x: x_axis,
         // y: [76.01, 77.14, 93.16, 97.26, 98.12, 98.92, 99.28, 98.74, 93.35, 94.25, 86.35, 81.4],
@@ -55,22 +52,22 @@ const plotly_graph = () => {
         // autoresize: true,
         // height: 300,
         // width: 600,
-        paper_bgcolor: '#eee',
-        plot_bgcolor: '#eee',
+        // paper_bgcolor: '#ee',
+        // plot_bgcolor: '#eee',
         margin: {
-            t: 20, r: 20, b: 35, l: 45,
+            t: 0, r: 20, b: 35, l: 45,
             pad: 4
         },
         barmode: 'group',
         bargap: 0.4,
         bargroupgap: 0.2,
         dragmode: false,
-        showlegend: false,
-        // legend: {
-        //     orientation: 'h',
-        //     x: 0.7,
-        //     y: -0.08
-        // },
+        // showlegend: false,
+        legend: {
+            orientation: 'h',
+            x: 0.7,
+            y: 1.05
+        },
         yaxis: {
             ticksuffix: "%"
         }
