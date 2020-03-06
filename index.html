@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plotly vs GoogleCharts</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <!-- Plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- GoogleCharts loader -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Custom Graphs -->
+    <script src="js/plotly.js"></script>
+    <script src="js/googlecharts.js"></script>
+</head>
+<body id="application">
+    <header id="master-controls">
+        <section id="data">
+            <p id="data__title">Data Size:</p>
+            <button id="data--small" class="data-btn" autofocus>Small</button>
+            <button id="data--average" class="data-btn">Average</button>
+            <button id="data--big" class="data-btn">Big</button>
+            <button id="data--massive" class="data-btn">Massive</button>
+        </section>
+
+        <section id="state">
+            <section id="state__controls">
+                <section id="controls__throttle">
+                    <label for="throttle">Throttle:</label>
+                    <select id="throttle">
+                        <option value="none">none</option>
+                        <option value="4G">4G (4 MB/s 20ms RTT)</option>
+                        <option value="3G">3G (750 KB/s 100ms RTT)</option>
+                        <option value="2G">2G (250 KB/s 300ms RTT)</option>
+                    </select>
+                </section>
+                <button id="controls__refresh">Refresh</button>
+            </section>
+        </section>
+    </header>
+    <main>
+        <div id="plotly" class="graph-div">
+
+            <h1 id="plotly__title" class="graph-title">Plotly</h1>
+
+            <section id="plotly__graph" class="graph-display"></section>
+
+            <section id="plotly__controls" class="graph-controls">
+                <button id="plotly__controls__reload" class="reload">Reload</button>
+                <button id="plotly__controls__redraw" class="redraw">Redraw</button>
+                <input id="plotly__controls__slider" class="slider" type="range" min="1" max="100" value="50">
+            </section>
+
+            <section id="plotly__stats" class="graph-stats">
+                <div id="plotly__stats__reload" class="stats-time">
+                    <p>Time to load:</p>
+                    <data>x</data>
+                </div>
+                <div id="plotly__stats__redraw" class="stats-time">
+                    <p>Time to redraw:</p>
+                    <data>x</data>
+                </div>
+                <div id="plotly__performance-rating" class="performance-rating">
+                    <p>Performance Rating</p>
+                    <data>X</data>
+                </div>
+            </section>
+        </div>
+
+        <div id="gcharts" class="graph-div">
+
+            <h1 id="gcharts__title" class="graph-title">Google Charts</h1>
+
+            <section id="gcharts__graph" class="graph-display">
+                <!-- <div>GRAPH</div> -->
+            </section>
+
+            <section id="gcharts__controls" class="graph-controls">
+                <button id="gcharts__controls__reload" class="reload">Reload</button>
+                <button id="gcharts__controls__redraw" class="redraw">Redraw</button>
+                <input id="gcharts__controls__slider" class="slider" type="range" min="1" max="100" value="50" class="slider">
+            </section>
+
+            <section id="gcharts__stats" class="graph-stats">
+                <div id="gcharts__stats__reload" class="stats-time">
+                    <p>Time to load:</p>
+                    <data>x</data>
+                </div>
+                <div id="gcharts__stats__redraw" class="stats-time">
+                    <p>Time to redraw:</p>
+                    <data>x</data>
+                </div>
+                <div id="gcharts__performance-rating"class="performance-rating">
+                    <p>Performance Rating</p>
+                    <data>X</data>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        plotly_graph();
+        gchart_graph();
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+}
+
+button {
+    font-weight: bold;
+    min-width: 6em;
+    height: min-content; width: min-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border-style: outset;
+}
+button:focus {
+    outline: none;
+}
+button:active {
+    filter: brightness(.9);
+    border-style: inset;
+}
+
+body {
+    height: 100vh; width: 100vw;
+    background-color: #dddddd;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    box-shadow: 0 -4px 20px 2px black;
+}
+
+#master-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 12px 24px;
+}
+
+#data {
+    display: flex;
+    align-items: center;
+}
+#data__title {
+    margin-right: 4px;
+}
+.data-btn {
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+.data-btn:focus {
+    filter: brightness(.85);
+    border-style: inset;
+}
+
+#state__controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#controls__refresh {
+    margin-left: 24px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.graph-div {
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr 2fr;
+    border-right: black solid 1px;
+}
+
+
+.graph-title {
+    text-align: center;
+    padding-top: 6px;
+}
+
+.graph-display {
+    background-color: #333333;
+    color: #dddddd
+}
+
+.graph-stats {
+    display: grid;
+    grid-template-areas: 
+        "reload rating"
+        "redraw rating";
+    
+    grid-template-columns: 1fr 1fr;
+    padding: 12px 24px;
+}
+
+.stats-time {
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.stats-time:first-child p {
+    margin-left: 16px;
+}
+
+.stats-time > p {
+    margin-right: 6px;
+}
+
+.stats-time > data {
+    font-style: italic;
+}
+
+.stats__reload {
+    grid-area: reload;
+}
+
+.stats__redraw {
+    grid-area: redraw;
+}
+
+.performance-rating {
+    grid-area: rating;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.performance-rating > p {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.performance-rating > data {
+    font-size: 1.25em;
+}
+
+.graph-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    justify-items: center;
+    align-items: center;
+    padding: 6px 24px;
+    border-bottom: #cccccc solid 1px;
+}
+
+.slider {
+    width: 80%;
+}
