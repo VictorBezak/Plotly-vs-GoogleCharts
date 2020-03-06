@@ -1,5 +1,6 @@
 # Plotly-vs-GoogleCharts
-Graphing library performance testing
+
+Graphing library performance testing.
 
 ## Dev Notes
 
